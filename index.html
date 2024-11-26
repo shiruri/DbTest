@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Machine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, button {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Order Machine</h1>
+    <form action="submit_order.php" method="post">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first_name" required>
+
+        <label for="middle-name">Middle Name</label>
+        <input type="text" id="middle-name" name="middle_name" required>
+
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last_name" required>
+
+        <label>Hamburger Type</label>
+        <label><input type="radio" name="hamburger_type" value="Classic" required> Classic</label>
+        <label><input type="radio" name="hamburger_type" value="Cheese"> Cheese</label>
+        <label><input type="radio" name="hamburger_type" value="Bacon"> Bacon</label>
+        <label><input type="radio" name="hamburger_type" value="Veggie"> Veggie</label>
+        <label><input type="radio" name="hamburger_type" value="Spicy"> Spicy</label>
+
+        <label>Drink</label>
+        <label><input type="radio" name="drink" value="Water" required> Water</label>
+        <label><input type="radio" name="drink" value="Soda"> Soda</label>
+        <label><input type="radio" name="drink" value="Juice"> Juice</label>
+        <label><input type="radio" name="drink" value="Tea"> Tea</label>
+        <label><input type="radio" name="drink" value="Coffee"> Coffee</label>
+
+        <label>Payment Method</label>
+        <select name="payment_method" required>
+            <option value="Gcash">Gcash</option>
+            <option value="Paypal">Paypal</option>
+            <option value="Cash">Cash</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
